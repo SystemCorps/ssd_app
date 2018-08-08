@@ -52,6 +52,9 @@ from object_detection.builders import model_builder
 from object_detection.legacy import trainer
 from object_detection.utils import config_util
 
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   
+os.environ["CUDA_VISIBLE_DEVICES"]="3"
+
 tf.logging.set_verbosity(tf.logging.INFO)
 
 flags = tf.app.flags
